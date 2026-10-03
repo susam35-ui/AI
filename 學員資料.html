@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI課程學員自我介紹</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 30px;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+        background: #f5f7fb;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 32px;
+        color: #333;
+    }
+
+    .subtitle {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #777;
+        font-size: 17px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+        border-top: 6px solid #7c8cff;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+    }
+
+    .card.new {
+        border-top-color: #4caf50;
+    }
+
+    .card.old {
+        border-top-color: #ff9800;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .number {
+        font-size: 20px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .tag {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .tag.new {
+        background: #e8f5e9;
+        color: #2e7d32;
+    }
+
+    .tag.old {
+        background: #fff3e0;
+        color: #e65100;
+    }
+
+    .name {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .age {
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-weight: bold;
+        margin-top: 12px;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    .background {
+        line-height: 1.7;
+        color: #555;
+    }
+
+    .highlight {
+        margin-top: 15px;
+        padding: 13px;
+        background: #f7f8ff;
+        border-radius: 12px;
+        line-height: 1.6;
+        color: #444;
+    }
+
+    .highlight::before {
+        content: "💡 ";
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            padding: 18px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 AI課程學員自我介紹</h1>
+    <div class="subtitle">一起學AI・一起交流・一起跟上時代</div>
+
+    <div class="cards">
+
+        <!-- 1 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">01</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">王麗珠</div>
+            <div class="age">年齡：68</div>
+            <div class="section-title">背景</div>
+            <div class="background">已上課很多期，想學習AI</div>
+            <div class="highlight">今天有事請假，仍特別提到想學AI</div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">02</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">林雅慧</div>
+            <div class="age">年齡：53</div>
+            <div class="section-title">背景</div>
+            <div class="background">第2次上課，上學期缺課較多，因此重修</div>
+            <div class="highlight">再來學一次</div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">03</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">許芳榛</div>
+            <div class="age">年齡：47</div>
+            <div class="section-title">背景</div>
+            <div class="background">第3次上課，上學期缺課較多，希望運用在工作上</div>
+            <div class="highlight">想把AI真正用在工作上</div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">04</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">曾玉美</div>
+            <div class="age">年齡：64</div>
+            <div class="section-title">背景</div>
+            <div class="background">第2次上課，因事請假一個月</div>
+            <div class="highlight">已先向老師請假</div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">05</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">黃鳳庭</div>
+            <div class="age">年齡：56</div>
+            <div class="section-title">背景</div>
+            <div class="background">上課次數不詳，週六下午來上課</div>
+            <div class="highlight">湊人氣，提升電腦學習力</div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">06</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">王淑貞</div>
+            <div class="age">年齡：52</div>
+            <div class="section-title">背景</div>
+            <div class="background">第2次上課，希望週六過得充實</div>
+            <div class="highlight">想要過充實的週六</div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">07</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">黃秋香</div>
+            <div class="age">年齡：70</div>
+            <div class="section-title">背景</div>
+            <div class="background">第3次來社大，想學習AI</div>
+            <div class="highlight">70仍積極學AI</div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">08</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">林麗華</div>
+            <div class="age">年齡：70</div>
+            <div class="section-title">背景</div>
+            <div class="background">利用週六假日學習、認識新事物</div>
+            <div class="highlight">交年輕朋友們</div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">09</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">鄭健彰</div>
+            <div class="age">年齡：65</div>
+            <div class="section-title">背景</div>
+            <div class="background">第2次上課，希望增長知識、跟上潮流</div>
+            <div class="highlight">上最認真的老師的課</div>
+        </div>
+
+        <!-- 10 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">10</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">楊秀姝</div>
+            <div class="age">年齡：67</div>
+            <div class="section-title">背景</div>
+            <div class="background">喜歡課堂氛圍，因此繼續學習</div>
+            <div class="highlight">溫故知新</div>
+        </div>
+
+        <!-- 12 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">12</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">林筱雲</div>
+            <div class="age">年齡：26</div>
+            <div class="section-title">背景</div>
+            <div class="background">第2次上課，認為課程先進、跟得上時事</div>
+            <div class="highlight">好心姐姐幫忙</div>
+        </div>
+
+        <!-- 13 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">13</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">林奕儒</div>
+            <div class="age">年齡：61</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上課，希望增加AI能力</div>
+            <div class="highlight">把空閒時間用來提升AI能力</div>
+        </div>
+
+        <!-- 15 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">15</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">許惠</div>
+            <div class="age">年齡：69</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上課，已有AI使用經驗，希望深入學習</div>
+            <div class="highlight">會用，但是想再深入一點</div>
+        </div>
+
+        <!-- 16 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">16</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">粘麗莉</div>
+            <div class="age">年齡：63</div>
+            <div class="section-title">背景</div>
+            <div class="background">初次來社大，希望將AI融入生活</div>
+            <div class="highlight">現在是AI時代</div>
+        </div>
+
+        <!-- 17 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">17</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">莊欽章</div>
+            <div class="age">年齡：62</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上課，利用時間空檔學AI</div>
+            <div class="highlight">善用時間空檔學習AI</div>
+        </div>
+
+        <!-- 18 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">18</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">施惠蓁</div>
+            <div class="age">年齡：58</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次來社大，想學習AI</div>
+            <div class="highlight">直接、明確地表達學AI目的</div>
+        </div>
+
+        <!-- 19 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">19</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">曾昭銘</div>
+            <div class="age">年齡：64</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上課，希望深入了解AI應用及與同學交流</div>
+            <div class="highlight">AI有多難學、有多廣度</div>
+        </div>
+
+        <!-- 20 -->
+        <div class="card old">
+            <div class="top">
+                <div class="number">20</div>
+                <div class="tag old">舊學員</div>
+            </div>
+            <div class="name">廖德昭</div>
+            <div class="age">年齡：75</div>
+            <div class="section-title">背景</div>
+            <div class="background">已參加2次AI課程，再次學習</div>
+            <div class="highlight">喚起學習記憶</div>
+        </div>
+
+        <!-- 21 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">21</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">李森平</div>
+            <div class="age">年齡：67</div>
+            <div class="section-title">背景</div>
+            <div class="background">退休後時間較多，想學習新知</div>
+            <div class="highlight">退休沒事做，所以來上課</div>
+        </div>
+
+        <!-- 22 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">22</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">陸曉蘭</div>
+            <div class="age">年齡：37</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上課，希望認識AI並應用於生活</div>
+            <div class="highlight">想把AI帶進日常生活</div>
+        </div>
+
+        <!-- 23 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">23</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">林科鋐</div>
+            <div class="age">年齡：19</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上課，陪媽媽一起來</div>
+            <div class="highlight">怕媽媽自己一個人來上課太無聊</div>
+        </div>
+
+        <!-- 24 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">24</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">高士弘</div>
+            <div class="age">年齡：50</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上課，週六下午在家無聊</div>
+            <div class="highlight">把無聊變成學習時間</div>
+        </div>
+
+        <!-- 25 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">25</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">施慧玲</div>
+            <div class="age">年齡：62</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上課，想利用週六下午學習興趣</div>
+            <div class="highlight">週六下午在家無聊，想來學個興趣</div>
+        </div>
+
+        <!-- 26 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">26</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">孫連雲</div>
+            <div class="age">年齡：67</div>
+            <div class="section-title">背景</div>
+            <div class="background">第1次上AI課，對新事物好奇</div>
+            <div class="highlight">羨慕同學做出的AI圖片、影片，也想擁有這項能力</div>
+        </div>
+
+        <!-- 27 -->
+        <div class="card new">
+            <div class="top">
+                <div class="number">27</div>
+                <div class="tag new">新學員</div>
+            </div>
+            <div class="name">葉麗美</div>
+            <div class="age">年齡：70</div>
+            <div class="section-title">背景</div>
+            <div class="background">第一次學AI，希望了解如何應用於生活</div>
+            <div class="highlight">想怎樣應用到生活上？</div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
