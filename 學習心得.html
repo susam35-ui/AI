@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>許芳榛的 AI 學習筆記｜彰化社區大學</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', '"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(238, 242, 255, 0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+        }
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.45;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-purple-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Ambient Gradient Blobs Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="hero-blob w-96 h-96 bg-indigo-300 top-[-100px] left-[-100px]"></div>
+        <div class="hero-blob w-96 h-96 bg-purple-300 top-[30%] right-[-100px]"></div>
+        <div class="hero-blob w-80 h-80 bg-pink-200 bottom-[-50px] left-[20%]"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/75 border-b border-purple-100/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-bold text-lg shadow-md shadow-purple-200">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+                <div>
+                    <span class="font-bold text-slate-900 tracking-tight text-base sm:text-lg block">許芳榛的 AI 筆記</span>
+                    <span class="text-xs text-purple-600 font-medium hidden sm:block">彰化社區大學 終身學習紀錄</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-50 text-purple-700 border border-purple-200">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-2"></span>
+                    學習進行中
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 flex-grow">
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 md:pt-20 md:pb-24">
+            <div class="text-center max-w-3xl mx-auto">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-purple-100 text-purple-700 font-medium text-sm mb-6 animate-bounce">
+                    <i class="fa-solid fa-sparkles text-amber-400"></i>
+                    <span>彰化社區大學 實用課程特輯</span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                    讓 <span class="gradient-text">AI</span> 解決我的<br class="hidden sm:inline"/>生活大小事
+                </h1>
+
+                <p class="text-slate-600 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+                    從零認識 AI 工具、掌握精準下達指令的絕招，將創新科技轉化為工作與生活的神助手！
+                </p>
+
+                <!-- Metadata Info Chips Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left">
+                    <div class="glass-card p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-purple-600 mb-1 text-xl"><i class="fa-solid fa-user-graduate"></i></div>
+                        <div class="text-xs text-slate-400 font-medium">學習主角</div>
+                        <div class="text-slate-900 font-bold text-sm sm:text-base">許芳榛</div>
+                    </div>
+                    
+                    <div class="glass-card p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-indigo-600 mb-1 text-xl"><i class="fa-solid fa-clock"></i></div>
+                        <div class="text-xs text-slate-400 font-medium">上課時段</div>
+                        <div class="text-slate-900 font-bold text-sm sm:text-base">每週六下午</div>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-pink-600 mb-1 text-xl"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="text-xs text-slate-400 font-medium">學習地點</div>
+                        <div class="text-slate-900 font-bold text-sm sm:text-base">彰化社區大學</div>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-emerald-600 mb-1 text-xl"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="text-xs text-slate-400 font-medium">核心目標</div>
+                        <div class="text-slate-900 font-bold text-sm sm:text-base">職場效率大提升</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Story Section -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-xl shadow-purple-500/5 border border-purple-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 transform translate-x-8 -translate-y-8 w-40 h-40 bg-purple-100/50 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-3 h-8 bg-purple-600 rounded-full inline-block"></span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900">學員的心聲與心得</h2>
+                </div>
+
+                <!-- Story Paragraphs -->
+                <div class="space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed">
+                    <p class="relative pl-6 border-l-2 border-purple-200">
+                        「大家好，我是<strong class="text-purple-700 font-semibold bg-purple-50 px-1.5 py-0.5 rounded">許芳榛</strong>！每個週六下午，我都會來到<strong class="text-slate-900 font-semibold">彰化社區大學</strong>，參加<span class="text-indigo-600 font-semibold">「讓 AI 解決我的生活大小事」</span>這門超實用的課程。」
+                    </p>
+
+                    <p>
+                        在課堂上，我從零開始認識各種 AI 工具，不僅學會了如何向 AI <strong class="text-purple-700 underline underline-offset-4 decoration-purple-300">精準下達指令</strong>，更發現它能解決許多日常疑難雜症。
+                    </p>
+
+                    <div class="bg-gradient-to-r from-purple-50 via-indigo-50 to-pink-50 p-5 rounded-2xl border border-purple-100/80 my-6">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-quote-left text-purple-400 text-2xl mt-1"></i>
+                            <p class="text-slate-800 font-medium leading-relaxed italic">
+                                我來這裡最大的目標，就是希望把學到的 AI 新知真正運用在工作上，無論是<span class="text-purple-700 font-bold">撰寫文案</span>、<span class="text-indigo-600 font-bold">整理資料</span>還是<span class="text-pink-600 font-bold">設計海報</span>，都能讓 AI 成為我的得力小幫手，大幅提升工作效率！
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="font-medium text-slate-800">
+                        來到社大充實自我真的收穫滿滿，期待透過不斷學習，讓工作與生活都變得更加輕鬆智慧！
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights & Application Cards Grid -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">AI 學習重點與工作實踐</h2>
+                <p class="text-slate-500 text-sm sm:text-base mt-2">將課堂所學無縫落實到日常與職場情境</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl font-bold mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">精準下達指令</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            克服溝通隔閡，學會使用 Persona、Context 與 Clear Output 技巧，讓 AI 第一時間給出高品質回應。
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center text-xs text-purple-600 font-semibold">
+                        <span>指令提示詞技巧</span>
+                        <i class="fa-solid fa-arrow-right ml-auto group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl font-bold mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">高效文案撰寫</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            迅速生成活動企劃、社交媒體貼文與職場信件草稿，節省大量思考的時間與腦力。
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center text-xs text-indigo-600 font-semibold">
+                        <span>職場文書賦能</span>
+                        <i class="fa-solid fa-arrow-right ml-auto group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-csv"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">自動資料整理</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            將雜亂無章的筆記或數據快速轉換為條理分明的摘要、表格與簡報重點，決策更清晰。
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center text-xs text-emerald-600 font-semibold">
+                        <span>資訊歸納邏輯</span>
+                        <i class="fa-solid fa-arrow-right ml-auto group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl font-bold mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">視覺海報設計</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            善用生成式 AI 輔助發想創意視覺構圖、配色建議與素材製作，打造搶眼宣傳文宣。
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center text-xs text-pink-600 font-semibold">
+                        <span>創意美感應用</span>
+                        <i class="fa-solid fa-arrow-right ml-auto group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Widget (Enhancement) -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-slate-800">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+                    <div>
+                        <span class="text-purple-400 text-xs font-mono font-bold tracking-wider uppercase block mb-1">Interactive Feature</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-robot text-purple-400"></i>
+                            芳榛的 AI 應用情境模擬器
+                        </h3>
+                    </div>
+                    <div class="flex gap-2" id="demo-tabs">
+                        <button onclick="switchTab('copy')" id="tab-copy" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-purple-600 text-white transition-all">文案產生</button>
+                        <button onclick="switchTab('data')" id="tab-data" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">資料整理</button>
+                        <button onclick="switchTab('poster')" id="tab-poster" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">海報構想</button>
+                    </div>
+                </div>
+
+                <!-- Display Box -->
+                <div class="bg-slate-950/80 rounded-xl p-5 border border-slate-800 font-mono text-sm leading-relaxed min-h-[140px] flex flex-col justify-between">
+                    <div id="demo-content" class="text-slate-300">
+                        <span class="text-purple-400"># Prompt 指令：</span><br>
+                        請幫我為社大課程撰寫一段吸引人的社群招生文案，語氣親切溫暖。<br><br>
+                        <span class="text-emerald-400">🤖 AI 輸出結果：</span><br>
+                        「週末想給自己一個充實的禮物嗎？來彰化社區大學，跟著芳榛一起解鎖 AI 科技技能，讓生活大小事變得輕鬆又智慧！」
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800/80 flex justify-between items-center text-xs text-slate-500">
+                        <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i> 實測可用於工作效率提升</span>
+                        <span class="text-purple-400">點擊上方按鈕體驗不同情境</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote / Motto Footer Banner -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500 text-white shadow-xl">
+                <div class="relative z-10">
+                    <i class="fa-solid fa-seedling text-3xl mb-4 text-purple-200 animate-pulse"></i>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
+                        「讓工作與生活都變得更加輕鬆智慧！」
+                    </h2>
+                    <p class="text-purple-100 text-sm sm:text-base max-w-lg mx-auto font-light">
+                        終身學習不間斷，在彰化社區大學與 AI 共同成長，開啟職涯與生活的新可能。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 border-t border-purple-100 py-8 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-slate-700">彰化社區大學</span>
+                <span>•</span>
+                <span>「讓 AI 解決我的生活大小事」課程成果筆記</span>
+            </div>
+            <div>
+                <span>學員：<strong class="text-slate-700">許芳榛</strong> 學習記錄頁面</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        const demoData = {
+            copy: {
+                prompt: "請幫我為社大課程撰寫一段吸引人的社群招生文案，語氣親切溫暖。",
+                output: "「週末想給自己一個充實的禮物嗎？來彰化社區大學，跟著芳榛一起解鎖 AI 科技技能，讓生活大小事變得輕鬆又智慧！」"
+            },
+            data: {
+                prompt: "請將這段包含日期、地點與與會人員的口述語音檔整理成三點重點表格摘要。",
+                output: "1. 時間：每週六下午 | 2. 地點：彰化社區大學 | 3. 主題：實用 AI 工具操作與 Prompt 下達技巧演練"
+            },
+            poster: {
+                prompt: "請提供一張關於『AI 終身學習講座』的海報視覺設計構圖提案與配色建議。",
+                output: "🎨 主視覺提案：使用溫暖紫色漸層 background，中央放置科技手掌發光圖示，搭配『智慧生活・精彩翻倍』的大標題字體。"
+            }
+        };
+
+        function switchTab(type) {
+            // Update tabs style
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all";
+            });
+            const activeBtn = document.getElementById(`tab-${type}`);
+            if(activeBtn) {
+                activeBtn.className = "tab-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-purple-600 text-white transition-all shadow-md shadow-purple-900/50";
+            }
+
+            // Update Content
+            const contentBox = document.getElementById('demo-content');
+            const data = demoData[type];
+            contentBox.innerHTML = `
+                <span class="text-purple-400"># Prompt 指令：</span><br>
+                ${data.prompt}<br><br>
+                <span class="text-emerald-400">🤖 AI 輸出結果：</span><br>
+                ${data.output}
+            `;
+        }
+    </script>
+</body>
+</html>
